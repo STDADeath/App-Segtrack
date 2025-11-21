@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRMySqlApp", "QRMySqlApp.csproj", "{B493E550-15E5-4625-82DA-337AE151FF9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Segtrack", "Segtrack.csproj", "{DECB46C4-ABA9-461E-60F3-75C00DFE627F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B493E550-15E5-4625-82DA-337AE151FF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B493E550-15E5-4625-82DA-337AE151FF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B493E550-15E5-4625-82DA-337AE151FF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B493E550-15E5-4625-82DA-337AE151FF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECB46C4-ABA9-461E-60F3-75C00DFE627F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECB46C4-ABA9-461E-60F3-75C00DFE627F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECB46C4-ABA9-461E-60F3-75C00DFE627F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECB46C4-ABA9-461E-60F3-75C00DFE627F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8D0DB1D-62E2-4B9A-82D6-8D8CDF8613B0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,98 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<!-- Plataformas donde tu app MAUI se compila -->
+		<TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
+
+		<!-- Agrega Windows solo si estás usando Windows -->
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">
+			$(TargetFrameworks);net9.0-windows10.0.19041.0
+		</TargetFrameworks>
+
+		<!-- Tipo de salida: es un ejecutable -->
+		<OutputType>Exe</OutputType>
+
+		<!-- Namespace base del proyecto -->
+		<RootNamespace>Segtrack</RootNamespace>
+
+		<!-- Indica que este proyecto es MAUI -->
+		<UseMaui>true</UseMaui>
+
+		<!-- Administra todo como un solo proyecto (Android, iOS, Windows en uno) -->
+		<SingleProject>true</SingleProject>
+
+		<!-- Agrega automáticamente usings comunes -->
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Activa null safety -->
+		<Nullable>enable</Nullable>
+
+		<!-- Nombre que se mostrará en el teléfono -->
+		<ApplicationTitle>Segtrack</ApplicationTitle>
+
+		<!-- Identificador único de la app -->
+		<ApplicationId>com.companyname.segtrack</ApplicationId>
+
+		<!-- Versión visible y código interno de versión -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<!-- No empaquetar como app de Microsoft Store -->
+		<WindowsPackageType>None</WindowsPackageType>
+
+		<!-- Versiones mínimas que soporta cada plataforma -->
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Icono de la app -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg"
+		          ForegroundFile="Resources\AppIcon\appiconfg.svg"
+		          Color="#512BD4" />
+
+		<!-- Pantalla de carga -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg"
+		                  Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Todas las imágenes -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Esta imagen en particular será redimensionada -->
+		<MauiImage Update="Resources\Images\dotnet_bot.png"
+		           Resize="True" BaseSize="300,185" />
+
+		<!-- Todas las fuentes personalizadas -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Archivos sueltos como audios, JSON, PDFs, etc. -->
+		<MauiAsset Include="Resources\Raw\**"
+		           LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Toolkit para MVVM (binds, commands, observable properties...) -->
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+
+		<!-- Librería principal de MAUI -->
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+
+		<!-- Logs de depuración -->
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+
+		<!-- Conector para MySQL -->
+		<PackageReference Include="MySql.Data" Version="9.5.0" />
+
+		<!-- Scanner de QR -->
+		<PackageReference Include="ZXing.Net.Maui" Version="0.6.0" />
+		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.6.0" />
+	</ItemGroup>
+
+</Project>
+
