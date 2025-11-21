@@ -1,2 +1,2 @@
 # App-Segtrack
-Aplicación móvil desarrollada como parte del proyecto SEGTRACK, destinada a permitir el ingreso, registro y consulta de información mediante escaneo de QR y validación de usuarios del sistema
+Aplicación móvil desarrollada para el proyecto SEGTRACK. Su propósito es facilitar el control de accesos, el registro de personas y la consulta de información a través del escaneo de códigos QR y la validación de usuarios del sistema.
