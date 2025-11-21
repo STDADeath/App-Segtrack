@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>QRMySqlApp</name>
+    </assembly>
+    <members>
+        <member name="T:QRMySqlApp.Converters.BoolToStatusColorConverter">
+            <summary>
+            Convierte un valor booleano a un color de estado
+            true = Verde (éxito), false = Naranja (espera)
+            </summary>
+        </member>
+        <member name="T:QRMySqlApp.Converters.InvertedBoolConverter">
+            <summary>
+            Invierte un valor booleano
+            </summary>
+        </member>
+        <member name="T:QRMySqlApp.Converters.BoolToColorConverter">
+            <summary>
+            Convierte un valor booleano a un color genérico
+            true = Verde, false = Rojo
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.MainPage.OnAppearing">
+            <summary>
+            Se ejecuta cuando la página aparece en pantalla
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.MainPage.SolicitarPermisoCamara">
+            <summary>
+            Solicita permisos de cámara al usuario
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.MainPage.OnBarcodesDetected(System.Object,ZXing.Net.Maui.BarcodeDetectionEventArgs)">
+            <summary>
+            Se ejecuta cuando la cámara detecta uno o más códigos de barras/QR
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.MainPage.OnDisappearing">
+            <summary>
+            Se ejecuta cuando la página desaparece de la pantalla
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.MainPage.OnCameraTapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Maneja el evento de toque en el área de la cámara (opcional)
+            Permite enfocar manualmente
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.Services.DatabaseService.TestConnectionAsync">
+            <summary>
+            Prueba la conexión a la base de datos
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.Services.DatabaseService.BuscarProductoPorSerialAsync(System.String)">
+            <summary>
+            Busca un producto por su serial en la base de datos
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.Services.DatabaseService.ObtenerTodosProductosAsync">
+            <summary>
+            Obtiene todos los productos de la base de datos (limitado a 100)
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.Services.DatabaseService.InsertarProductoAsync(QRMySqlApp.Models.ProductData)">
+            <summary>
+            Inserta un nuevo producto en la base de datos
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.Services.DatabaseService.ActualizarStockAsync(System.String,System.Int32)">
+            <summary>
+            Actualiza el stock de un producto
+            </summary>
+        </member>
+        <member name="T:QRMySqlApp.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.ProcesarCodigoQR(System.String)">
+            <summary>
+            Procesa el código QR escaneado
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.ParsearCodigoQR(System.String)">
+            <summary>
+            Parsea el código QR según el formato esperado
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.BuscarProducto">
+            <summary>
+            Busca el producto en la base de datos por serial
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.ReiniciarEscaneo">
+            <summary>
+            Reinicia el escaneo y limpia todos los datos
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.TestConexion">
+            <summary>
+            Prueba la conexión con la base de datos
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.LimpiarDatosProducto">
+            <summary>
+            Limpia los datos del producto
+            </summary>
+        </member>
+        <member name="M:QRMySqlApp.ViewModels.MainViewModel.BuscarManual(System.String)">
+            <summary>
+            Busca manualmente un producto por serial (útil para testing)
+            </summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.DatosQR">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.datosQR"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.Serial">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.serial"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.Campo1">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.campo1"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.Campo2">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.campo2"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.Campo3">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.campo3"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.NombreProducto">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.nombreProducto"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.DescripcionProducto">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.descripcionProducto"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.PrecioProducto">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.precioProducto"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.StockProducto">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.stockProducto"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.MensajeEstado">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.mensajeEstado"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.IsScanning">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.isScanning"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.ProductFound">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.productFound"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.ShowNotFoundMessage">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.showNotFoundMessage"/>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.IsLoading">
+            <inheritdoc cref="F:QRMySqlApp.ViewModels.MainViewModel.isLoading"/>
+        </member>
+        <member name="F:QRMySqlApp.ViewModels.MainViewModel.procesarCodigoQRCommand">
+            <summary>The backing field for <see cref="P:QRMySqlApp.ViewModels.MainViewModel.ProcesarCodigoQRCommand"/>.</summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.ProcesarCodigoQRCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:QRMySqlApp.ViewModels.MainViewModel.ProcesarCodigoQR(System.String)"/>.</summary>
+        </member>
+        <member name="F:QRMySqlApp.ViewModels.MainViewModel.buscarProductoCommand">
+            <summary>The backing field for <see cref="P:QRMySqlApp.ViewModels.MainViewModel.BuscarProductoCommand"/>.</summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.BuscarProductoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:QRMySqlApp.ViewModels.MainViewModel.BuscarProducto"/>.</summary>
+        </member>
+        <member name="F:QRMySqlApp.ViewModels.MainViewModel.reiniciarEscaneoCommand">
+            <summary>The backing field for <see cref="P:QRMySqlApp.ViewModels.MainViewModel.ReiniciarEscaneoCommand"/>.</summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.ReiniciarEscaneoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:QRMySqlApp.ViewModels.MainViewModel.ReiniciarEscaneo"/>.</summary>
+        </member>
+        <member name="F:QRMySqlApp.ViewModels.MainViewModel.testConexionCommand">
+            <summary>The backing field for <see cref="P:QRMySqlApp.ViewModels.MainViewModel.TestConexionCommand"/>.</summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.TestConexionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:QRMySqlApp.ViewModels.MainViewModel.TestConexion"/>.</summary>
+        </member>
+        <member name="F:QRMySqlApp.ViewModels.MainViewModel.buscarManualCommand">
+            <summary>The backing field for <see cref="P:QRMySqlApp.ViewModels.MainViewModel.BuscarManualCommand"/>.</summary>
+        </member>
+        <member name="P:QRMySqlApp.ViewModels.MainViewModel.BuscarManualCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:QRMySqlApp.ViewModels.MainViewModel.BuscarManual(System.String)"/>.</summary>
+        </member>
+        <member name="T:QRMySqlApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DatosQR">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DatosQR" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Serial">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Serial" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Campo1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Campo1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Campo2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Campo2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Campo3">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Campo3" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NombreProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NombreProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DescripcionProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DescripcionProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PrecioProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PrecioProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StockProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StockProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MensajeEstado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MensajeEstado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsScanning">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsScanning" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProductFound">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProductFound" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShowNotFoundMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShowNotFoundMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DatosQR">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DatosQR" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Serial">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Serial" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Campo1">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Campo1" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Campo2">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Campo2" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Campo3">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Campo3" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NombreProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NombreProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DescripcionProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DescripcionProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PrecioProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PrecioProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StockProducto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StockProducto" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MensajeEstado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MensajeEstado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsScanning">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsScanning" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProductFound">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProductFound" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShowNotFoundMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShowNotFoundMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="QRMySqlApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:QRMySqlApp"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+
+    <!-- 
+    AppShell es el contenedor principal de navegación de la aplicación
+    FlyoutBehavior="Disabled" desactiva el menú lateral
+    NavBarIsVisible="False" oculta la barra de navegación superior
+    -->
+
+    <ShellContent
+        Title="Lector QR"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <!-- 
+    Se pueden agregar más páginas aquí en el futuro:
+    
+    <ShellContent
+        Title="Historial"
+        ContentTemplate="{DataTemplate local:HistoryPage}"
+        Route="HistoryPage" />
+    -->
+
+</Shell>

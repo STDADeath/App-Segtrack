@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QRMySqlApp"
+             xmlns:converters="clr-namespace:QRMySqlApp.Converters"
+             x:Class="QRMySqlApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Fusionar diccionarios de recursos predeterminados -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- ⭐ CONVERTERS PERSONALIZADOS -->
+            <converters:BoolToStatusColorConverter x:Key="BoolToStatusColorConverter" />
+            <converters:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+            <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+
+            <!-- ESTILOS GLOBALES PERSONALIZADOS -->
+
+            <!-- Estilo para títulos principales -->
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="28"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#2C3E50"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0,10,0,5"/>
+            </Style>
+
+            <!-- Estilo para subtítulos -->
+            <Style x:Key="SubtitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="#7F8C8D"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,0,20"/>
+            </Style>
+
+            <!-- Estilo para badges de estado -->
+            <Style x:Key="StatusLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="15,8"/>
+                <Setter Property="Margin" Value="0,5,0,15"/>
+            </Style>
+
+            <!-- Estilo para títulos de sección -->
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="#34495E"/>
+                <Setter Property="Margin" Value="0,0,0,10"/>
+            </Style>
+
+            <!-- Estilo para etiquetas de campo -->
+            <Style x:Key="FieldLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="#5D6D7E"/>
+                <Setter Property="Margin" Value="0,5,0,3"/>
+            </Style>
+
+            <!-- Estilo para cards/frames -->
+            <Style x:Key="CardFrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="Margin" Value="0,0,0,15"/>
+            </Style>
+
+            <!-- Estilo para botón primario -->
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#3498DB"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+
+            <!-- Estilo para botón secundario -->
+            <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E67E22"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+
+            <!-- Estilo para campos de entrada -->
+            <Style x:Key="FieldEntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#F8F9FA"/>
+                <Setter Property="TextColor" Value="#2C3E50"/>
+                <Setter Property="PlaceholderColor" Value="#95A5A6"/>
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+
+            <!-- Estilo para campos de texto múltiple -->
+            <Style x:Key="FieldEditorStyle" TargetType="Editor">
+                <Setter Property="BackgroundColor" Value="#F8F9FA"/>
+                <Setter Property="TextColor" Value="#2C3E50"/>
+                <Setter Property="PlaceholderColor" Value="#95A5A6"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
