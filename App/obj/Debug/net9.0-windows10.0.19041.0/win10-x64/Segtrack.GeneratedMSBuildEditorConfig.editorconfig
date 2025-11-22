@@ -17,7 +17,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Segtrack
-build_property.ProjectDir = C:\xampp\htdocs\App-Segtrack\App\
+build_property.ProjectDir = C:\Users\carri\source\repos\STDADeath\App-Segtrack\App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotExportsEnabled = 
@@ -29,31 +29,31 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/xampp/htdocs/App-Segtrack/App/App.xaml]
+[C:/Users/carri/source/repos/STDADeath/App-Segtrack/App/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Segtrack.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/xampp/htdocs/App-Segtrack/App/AppShell.xaml]
+[C:/Users/carri/source/repos/STDADeath/App-Segtrack/App/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Segtrack.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/xampp/htdocs/App-Segtrack/App/MainPage.xaml]
+[C:/Users/carri/source/repos/STDADeath/App-Segtrack/App/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Segtrack.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/xampp/htdocs/App-Segtrack/App/Resources/Styles/Colors.xaml]
+[C:/Users/carri/source/repos/STDADeath/App-Segtrack/App/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Segtrack.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/xampp/htdocs/App-Segtrack/App/Resources/Styles/Styles.xaml]
+[C:/Users/carri/source/repos/STDADeath/App-Segtrack/App/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Segtrack.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

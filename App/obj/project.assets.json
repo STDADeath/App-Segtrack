@@ -34353,11 +34353,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\App-Segtrack\\App\\Segtrack.csproj",
+      "projectUniqueName": "C:\\Users\\carri\\source\\repos\\STDADeath\\App-Segtrack\\App\\Segtrack.csproj",
       "projectName": "Segtrack",
-      "projectPath": "C:\\xampp\\htdocs\\App-Segtrack\\App\\Segtrack.csproj",
+      "projectPath": "C:\\Users\\carri\\source\\repos\\STDADeath\\App-Segtrack\\App\\Segtrack.csproj",
       "packagesPath": "C:\\Users\\carri\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\App-Segtrack\\App\\obj\\",
+      "outputPath": "C:\\Users\\carri\\source\\repos\\STDADeath\\App-Segtrack\\App\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

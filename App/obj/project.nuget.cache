@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LYSZ3AVH+ow=",
+  "dgSpecHash": "I/ldHVPCTpI=",
   "success": true,
-  "projectFilePath": "C:\\xampp\\htdocs\\App-Segtrack\\App\\Segtrack.csproj",
+  "projectFilePath": "C:\\Users\\carri\\source\\repos\\STDADeath\\App-Segtrack\\App\\Segtrack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carri\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\carri\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
