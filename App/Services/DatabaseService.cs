@@ -4,7 +4,7 @@ namespace segtrack.Services
 {
     public class DatabaseService
     {
-        private const string SERVER = "localhost";
+        private const string SERVER = "192.168.56.1";
         private const string DATABASE = "dbsegtrack";
         private const string USER = "root";
         private const string PASSWORD = "";

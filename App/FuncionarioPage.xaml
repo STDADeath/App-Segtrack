@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:segtrack.ViewModels"
+    x:Class="segtrack.Views.FuncionarioPage"
+    Title="Funcionarios">
+
+	<ContentPage.BindingContext>
+		<viewmodel:ViewModelFuncionario />
+	</ContentPage.BindingContext>
+
+	<ScrollView>
+		<VerticalStackLayout Padding="15" Spacing="15">
+
+		
+			<Frame BorderColor="#1976D2" CornerRadius="10" Padding="15">
+
+				<VerticalStackLayout Spacing="10">
+
+					<Label Text="Registrar / Editar Funcionario"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Center"/>
+
+					<Entry Placeholder="Nombre"
+                           Text="{Binding NombreFuncionario}" />
+
+					<Entry Placeholder="Cargo"
+                           Text="{Binding CargoFuncionario}" />
+
+					<Entry Placeholder="Documento"
+                           Keyboard="Numeric"
+                           Text="{Binding DocumentoFuncionario}" />
+
+					<Entry Placeholder="Tel�fono"
+                           Keyboard="Telephone"
+                           Text="{Binding TelefonoFuncionario}" />
+
+					<Entry Placeholder="Correo"
+                           Keyboard="Email"
+                           Text="{Binding CorreoFuncionario}" />
+
+					<Entry Placeholder="C�digo QR"
+                           Text="{Binding QrCodigoFuncionario}" />
+
+					<Picker Title="Estado"
+                            ItemsSource="{Binding Estados}"
+                            SelectedItem="{Binding Estado}" />
+
+					<Entry Placeholder="ID Sede"
+                           Keyboard="Numeric"
+                           Text="{Binding IdSede}" />
+
+					<!-- BOTONES -->
+					<HorizontalStackLayout Spacing="10">
+						<Button Text="Guardar"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                Command="{Binding GuardarCommand}" />
+
+						<Button Text="Limpiar"
+                                BackgroundColor="#9E9E9E"
+                                TextColor="White"
+                                Command="{Binding LimpiarCommand}" />
+					</HorizontalStackLayout>
+
+				</VerticalStackLayout>
+			</Frame>
+
+			<!-- ------------------------- -->
+			<!--      LISTA DE DATOS       -->
+			<!-- ------------------------- -->
+			<Label Text="Lista de Funcionarios"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+
+			<CollectionView
+                ItemsSource="{Binding Funcionarios}"
+                SelectionMode="None">
+
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+
+						<Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+							<VerticalStackLayout>
+
+								<Label Text="{Binding NombreFuncionario}" FontAttributes="Bold" FontSize="16" />
+								<Label Text="{Binding CargoFuncionario}" FontSize="14" />
+								<Label Text="{Binding DocumentoFuncionario}" FontSize="12" />
+
+								<HorizontalStackLayout Spacing="10" Margin="0,5,0,0">
+									<Button Text="Editar"
+                                            BackgroundColor="#1976D2"
+                                            TextColor="White"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ViewModelFuncionario}}, Path=EditarCommand}"
+                                            CommandParameter="{Binding}" />
+
+									<Button Text="Eliminar"
+                                            BackgroundColor="#D32F2F"
+                                            TextColor="White"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ViewModelFuncionario}}, Path=EliminarCommand}"
+                                            CommandParameter="{Binding IdFuncionario}" />
+								</HorizontalStackLayout>
+
+							</VerticalStackLayout>
+						</Frame>
+
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+
+			</CollectionView>
+
+		</VerticalStackLayout>
+	</ScrollView>
+
+</ContentPage>

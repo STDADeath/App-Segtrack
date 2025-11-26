@@ -3,7 +3,7 @@
     x:Class="QRMySqlApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:QRMySqlApp"
+    xmlns:local="clr-namespace:segtrack.Views"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False">
 
@@ -13,10 +13,11 @@
     NavBarIsVisible="False" oculta la barra de navegación superior
     -->
 
-    <ShellContent
-        Title="Lector QR"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+ <ShellContent
+    Title="Funcionarios"
+    ContentTemplate="{DataTemplate local:FuncionarioPage}"
+    Route="FuncionarioPage" />
+
 
     <!-- 
     Se pueden agregar más páginas aquí en el futuro:

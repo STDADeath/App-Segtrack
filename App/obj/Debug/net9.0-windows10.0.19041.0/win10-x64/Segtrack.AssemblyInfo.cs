@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Segtrack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f7fcda9a87c360931f829d31d2118e2c244749ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b78e6ddc15dc6fce0f40d77e4414a3eba61d5feb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Segtrack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Segtrack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
